@@ -5,7 +5,10 @@ const server = mongoose;
 
 export const connect = () => {
   server
-    .connect(db, { useNewUrlParser: "true", useUnifiedTopology: "true" })
+    .connect(
+      "mongodb+srv://nguyenducde:lalanganhaivip1@cluster0.m0jj83n.mongodb.net/shopping?retryWrites=true&w=majority",
+      { useNewUrlParser: "true", useUnifiedTopology: "true" }
+    )
     .then(() => {
       console.log("connected to mongoose");
     })
