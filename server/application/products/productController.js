@@ -43,6 +43,7 @@ function createProduct(req, res, next) {
       req.body.color,
       req.body.size,
       req.body.hot,
+      req.body.star
     )
     .then((product) => res.json(product))
     .catch((error) => next(error));
